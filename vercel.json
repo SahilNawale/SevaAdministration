@@ -1,4 +1,5 @@
 {
+    "version":2,
   "builds": [
     {
       "src": "backend/wsgi.py",
@@ -7,7 +8,7 @@
     },
     {
         "src":"build_files.sh",
-        "user":"@vercel/static-build",
+        "use":"@vercel/static-build",
         "config":{
             "distDir":"staticfiles_build"
         }
