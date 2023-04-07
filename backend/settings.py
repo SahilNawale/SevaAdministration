@@ -9,7 +9,7 @@ SECRET_KEY = 'django-insecure--3fb9=7qvp#!jz(r1k=jy2zy)_+8cf!5#9k8il%wbl32zum+@6
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["*",'.vercel.app']
+ALLOWED_HOSTS = [".vercel.app"]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -89,7 +89,6 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:8000",
     "http://127.0.0.1",
-    "*"
 ]
 
 CORS_ORIGIN_ALLOW_ALL=True
@@ -101,5 +100,8 @@ CORS_ALLOW_HEADERS = ('content-disposition', 'accept-encoding',
 
 STATIC_URL = 'static/'
 MEDIA_URL = '/media/'
+
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
